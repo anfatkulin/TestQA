@@ -1,0 +1,15 @@
+Разберитесь в причинах падения тестов сборки номер 2862 – проверка функционала линковки строк. Ссылка на сборку – https://dev.irpteam.com/tc/buildConfiguration/IRP_RunVA/26984?buildTab=artifacts#%2Fallure-report.zip. В качестве отчета пришлите файл с описанными причинами падения тестов.
+
+ОТВЕТ:
+1. #1_970001 filling in test data base: могу предположить что ошибка была связана с тем, что гиперссылка "e1cib/list/Document.SalesOrder" оказалась не рабочей.
+2. #1_015450 check message output for SO when trying to create a purchase order/SC: в данном случае ошибка связана с тем, что количество строчек в табличной части <BasisesTree> равно "<2>", а ожидалось на самом деле 0.
+3. #1_0154149 create Cash statement: ошибка в том, что не было обнаружено табличной части с именем "<List>"
+4. #1_092003 check serial lot number in the Retail return receipt: в данном случае, скорее всего ошибка связана с отсутсвием значения "serial lot number" в документе "Retail return receipt".
+5. #1_024027 cancel line in the SO and create SI: в данном случае ошибка связана с тем, что не обнаружена команда или кнопка с заголовком "<Sales invoice>"
+6. Две ошибки "#1_024004 create SI using form link/unlink" и "#2_2060018 check link form in the PI with 2 lines with the same items" связаны с тем, что с таблицей <BasisesTree> что-то не так.
+
+
+ 
+ 
+ 
+ 
